@@ -1,4 +1,4 @@
-#the-grilled-prawn
+#the-grilled-prawn 
 ## Live demo
 ### https://maliganesh2011.github.io/the-grilled-prawn/
 
@@ -10,7 +10,7 @@ navigate
 ```
 cd the-grilled-prawn
 ```
-## Run ```index.html ```file on browser.
+## Run ```index.html ```file on your browser.
 
 ### Technology Used
 * HTML5
@@ -18,8 +18,8 @@ cd the-grilled-prawn
 * JavaScript
 
 ##  Feature:
-* 1)Dynamic Navbar
-* 2)Dynamic Food Items
-* 3)Toggle Food Type
-* 4)Dynamically add/remove data from newsletter
-* 5)Dynamic data(JSON)
+* Dynamic Navbar
+* Dynamic Food Items
+* Toggle Food Type
+* Dynamically add/remove data from newsletter
+* Dynamic data(JSON)
