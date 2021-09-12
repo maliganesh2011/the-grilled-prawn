@@ -1,242 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Grilled Prawn</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-  <div class="nav">
-    <input type="checkbox" id="nav-check">
-    <div class="nav-header">
-      <div class="nav-title">
-        <a href=""> <img style="vertical-align:middle" class"logo" src="icons/logo.png" width="100px"
-            height="100px" /></a>
-        <span class="the-grilled-prawn">The Grilled Prawn</span>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>The Grilled Prawn</title>
+      <link rel="stylesheet" href="./css/style.css">
+   </head>
+   <body>
+      <div class="nav">
+         <input type="checkbox" id="nav-check">
+         <div class="nav-header">
+            <div class="nav-title">
+               <a href=""> <img style="vertical-align:middle" class"logo" src="icons/logo.png" width="100px"
+                  height="100px" /></a>
+               <span class="the-grilled-prawn">The Grilled Prawn</span>
+            </div>
+         </div>
+         <div class="nav-btn">
+            <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
+         </div>
+         <div class="nav-links" id="showMenu">
+         </div>
       </div>
-    </div>
-    <div class="nav-btn">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
-
-    <div class="nav-links" id="showMenu">
-    </div>
-
-  </div>
-
-  <div class="header">
-    <div class="overlay">
-      <div>
-        <label class="subtitle">LATEST RECIPE</label>
+      <div class="header">
+         <div class="overlay">
+            <div>
+               <label class="subtitle">LATEST RECIPE</label>
+            </div>
+            <div>
+               <label class="mainTitle">Baked Polenta with cheese and Mushrooms.</label>
+            </div>
+            <p class="subtext">
+               Polenta, goat cheese, Italian sausage, and cremini mushrooms. All together this will make for pretty darn good
+               side dish to a lovely salad. Go for it.
+            </p>
+            <button class="c-btn"><label class="btnText">Go to recipe</label> <img style="vertical-align:middle"
+               src="./icons/right-arrow.png" width="20px" height="15px"></button>
+         </div>
       </div>
-      <div>
-        <label class="mainTitle">Baked Polenta with cheese and Mushrooms.</label>
+      <div id="customBox">
+         <div class="row recipes_title">
+            <label>Our Recipes</label>
+         </div>
+         <div class="row ">
+            <div class="columnShowRecipe" style="background-color: #ea474c;padding-left: 35px;padding-top: 20px;"><button
+               class="clickBtn" onclick="myFunction()">Filter recipes by <img id="minus" style="vertical-align:middle"
+               src="./icons/dash.png" width="15px" height="5px"><img id="plus" style="vertical-align:middle"
+               src="./icons/plus.png" width="15px" height="15px"> </button></div>
+            <div class="columnShowRecipe">
+               <label style="color: black;" for="sort">Sort By:</label>
+               <select name="byDateSort" id="menuSort" class="c-btn">
+                  <option value="saab">Oldest First</option>
+                  <option value="volvo">Newest First</option>
+               </select>
+            </div>
+            <div class="columnShowRecipe"></div>
+            <div class="columnShowRecipe" style="text-align: right;"> <label style="color: black;" for="sort"> <img
+               style="vertical-align:middle" src="./icons/search.png   " width="15px" height="15px"> <input type="text"
+               placeholder="Search recipe" class="c-btn" style="border: none;" /></label></div>
+         </div>
+         <div id="showRecip">
+            <div class="row">
+               <div class="columnShowRecipe rtBorder">
+                  <h3>Food type:</h3>
+                  <div id="showFoodType">
+                  </div>
+               </div>
+               <div class="columnShowRecipe">
+                  <div class="row">
+                     <h3>Nationality:</h3>
+                  </div>
+                  <div id="showNationalItme">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="showRec">
+         </div>
+         <div onclick="topFunction()" id="return_TO">Return to the Top <img class="rotateImg" style="vertical-align:middle"
+            src="./icons/uparrow.png" width="10px" height="10px"></div>
       </div>
-      <p class="subtext">
-        Polenta, goat cheese, Italian sausage, and cremini mushrooms. All together this will make for pretty darn good
-        side dish to a lovely salad. Go for it.
-      </p>
-      <button class="c-btn"><label class="btnText">Go to recipe</label> <img style="vertical-align:middle"
-          src="./icons/right-arrow.png" width="20px" height="15px"></button>
-    </div>
-  </div>
-
-  <div id="customBox">
-    <div class="row recipes_title">
-      <label>Our Recipes</label>
-    </div>
-    <div class="row ">
-      <div class="columnShowRecipe" style="background-color: #ea474c;padding-left: 35px;padding-top: 20px;"><button
-          class="clickBtn" onclick="myFunction()">Filter recipes by <img id="minus" style="vertical-align:middle"
-            src="./icons/dash.png" width="15px" height="5px"><img id="plus" style="vertical-align:middle"
-            src="./icons/plus.png" width="15px" height="15px"> </button></div>
-      <div class="columnShowRecipe"> <label style="color: black;" for="sort">Sort By:</label>
-        <select name="byDateSort" id="menuSort" class="c-btn">
-          <option value="saab">Oldest First</option>
-          <option value="volvo">Newest First</option>
-        </select>
-      </div>
-      <div class="columnShowRecipe"></div>
-      <div class="columnShowRecipe" style="text-align: right;"> <label style="color: black;" for="sort"> <img
-            style="vertical-align:middle" src="./icons/search.png   " width="15px" height="15px"> <input type="text"
-            placeholder="Search recipe" class="c-btn" style="border: none;" /></label></div>
-
-    </div>
-
-
-
-    <div id="showRecip">
       <div class="row">
-        <div class="columnShowRecipe rtBorder">
-          <h3>Food type:</h3>
-          <div id="showFoodType">
-
-          </div>
-        </div>
-        <div class="columnShowRecipe">
-          <div class="row">
-            <h3>Nationality:</h3>
-          </div>
-          <div id="showNationalItme">
-
-          </div>
-
-        </div>
-        <div class="columnShowRecipe" style="padding-top: 65px;"> <label class="menuType">Chinese(18)
-            <input type="checkbox" id="foodType" name="foodType" value="Chinese">
-            <span class="checkmark"></span>
-          </label>
-          <label class="menuType" id="foodType" name="foodType" value="Mains">Indian(13)
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <label class="menuType" id="foodTypeml" name="foodType" value="Indian">Thai(10)
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <label class="menuType">Norwegian(4)
-            <input type="checkbox" id="foodType" name="foodType" value="Special Occasions">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="columnShowRecipe" style="padding-top: 65px;"> <label class="menuType">Polish(2)
-            <input type="checkbox" id="foodType" name="foodType" value="Polish">
-            <span class="checkmark"></span>
-          </label>
-          <label class="menuType" id="foodType" name="foodType" value="Danish">Danish(3)
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <label class="menuType" id="foodTypeml" name="foodType" value="Belgian"> Belgian(7)
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <label class="menuType">Persian(13)
-            <input type="checkbox" id="foodType" name="foodType" value="Persian">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-
+         <div class="column" style="padding: 50px;color:#fff;background-color: #ea474c;">
+            <div>
+               <label class="mainTitle">Spread the world!</label>
+            </div>
+            <p class="subtext">
+               Our recipes are awesome, sign up to our newsletter and </br>
+               invite friends to join the Gilled Prawn cult
+            </p>
+            <div style="overflow-x:auto;">
+               <table id="myTable">
+                  <tr>
+                     <th>Name</th>
+                     <th>Surname</th>
+                     <th>Email address</th>
+                     <th>Action</th>
+                  </tr>
+                  <tr>
+                     <td>Ganesh</td>
+                     <td>Mali</td>
+                     <td>ganesh.m@zensar.com</td>
+                     <td><button class="c-btn_red_rm" onclick="deleteRow(this)" /> <img style="vertical-align:middle"
+                        src="./icons/trash.gif" width="20px" height="15px"> Remove</button></td>
+                  </tr>
+               </table>
+            </div>
+            <hr class="solid">
+            <div style="overflow-x:auto;">
+               <table id="demo">
+                  <tr>
+                     <th>Name</th>
+                     <th>Surname</th>
+                     <th>Email address</th>
+                     <th>Action</th>
+                  </tr>
+                  <tr>
+                     <td> <input name="name" type="text" maxlength="512" id="cell1" class="c-btn " /></td>
+                     <td><input name="surname " type="text" maxlength="512" id="cell2" class="c-btn" /></td>
+                     <td> <input name="surname " type="text" maxlength="512" id="cell3" class="c-btn" /></td>
+                     <td> <button onclick="insRow()" class="c-btn_red" style="border: 1px solid white;"><label
+                        class="btnText">Add Friend</label> </button></td>
+                  </tr>
+               </table>
+            </div>
+            <div class="vertical-center">
+               <button class="c-btn"><label class="btnText">Send</label> <img style="vertical-align:middle"
+                  src="./icons/right-arrow.png" width="20px" height="15px"></button>
+            </div>
+         </div>
       </div>
-    </div>
-    <div id="showRec">
-    </div>
-    <div onclick="topFunction()" id="return_TO">Return to the Top <img class="rotateImg" style="vertical-align:middle"
-        src="./icons/uparrow.png" width="10px" height="10px"></div>
-
-  </div>
-
-
-  <div class="row">
-    <div class="column" style="padding: 50px;color:#fff;background-color: #ea474c;">
-
-      <div>
-        <label class="mainTitle">Spread the world!</label>
+      <div class="customBox">
+      <div class="row" style="margin: 50px;">
+         <div class="column p-25">
+            <label class="subtitle">Our Recipes</label>
+            <p class="subtext_small">
+               All our recipes are tested throughtly by us to make sure they're suitable for your kitchen at home. We know
+               many of you are concerned about healthy eating, so we send them to a qualified nutritionist for through
+               analysis too.
+            </p>
+         </div>
+         <div class="column p-25">
+            <label class="subtitle">Grilled Praw's History</label>
+            <p class="subtext_small">
+               The Grilled Prawn is a fictional food blog created in January 2015.
+            </p>
+         </div>
+         <div class="column p-25">
+            <label class="subtitle">Tips and Tricks</label>
+            <p class="subtext_small">
+               Not sure how to do something? Don't panic. We have plenty of tutorials for you.
+            </p>
+            <p class="subtext_small" style="color: red;">
+               Learn more
+            </p>
+         </div>
+         <div class="column p-25">
+            <label class="subtitle">Help and Contact</label>
+            <p class="subtext_small">
+               Struggling with one of the recipes?
+            </p>
+            <p class="subtext_small" style="color: red;">
+               Send us an email
+            </p>
+            <p class="subtext_small">
+               We are always happy to try new things, send us your suggestions!
+            </p>
+         </div>
+         <div class="column p-25">
+            <label class="subtitle"> © The Grilled Prawn</label>
+            <p class="subtext_small">
+               All our recipes are tested throughtly by us to make sure they're suitable for your kitchen at home. We know
+               many of you are concerned about healthy eating, so we send them to a qualified nutritionist for through
+               analysis too
+            </p>
+         </div>
       </div>
-      <p class="subtext">
-        Our recipes are awesome, sign up to our newsletter and </br>
-        invite friends to join the Gilled Prawn cult
-      </p>
-
-      <div style="overflow-x:auto;">
-        <table id="myTable">
-          <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Email address</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            <td>Ganesh</td>
-            <td>Mali</td>
-            <td>ganesh.m@zensar.com</td>
-            <td><button class="c-btn_red_rm" onclick="deleteRow(this)" /> <img style="vertical-align:middle"
-                src="./icons/trash.gif" width="20px" height="15px"> Remove</button></td>
-          </tr>
-
-        </table>
-      </div>
-      <hr class="solid">
-      <div style="overflow-x:auto;">
-        <table id="demo">
-          <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Email address</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            <td> <input name="name" type="text" maxlength="512" id="cell1" class="c-btn " /></td>
-            <td><input name="surname " type="text" maxlength="512" id="cell2" class="c-btn" /></td>
-            <td> <input name="surname " type="text" maxlength="512" id="cell3" class="c-btn" /></td>
-            <td> <button onclick="insRow()" class="c-btn_red" style="border: 1px solid white;"><label
-                  class="btnText">Add Friend</label> </button></td>
-          </tr>
-        </table>
-      </div>
-      <div class="vertical-center">
-        <button class="c-btn"><label class="btnText">Send</label> <img style="vertical-align:middle"
-            src="./icons/right-arrow.png" width="20px" height="15px"></button>
-
-      </div>
-
-
-    </div>
-  </div>
-  <div class="customBox">
-    <div class="row" style="margin: 50px;">
-      <div class="column p-25"> <label class="subtitle">Our Recipes</label>
-        <p class="subtext_small">
-          All our recipes are tested throughtly by us to make sure they're suitable for your kitchen at home. We know
-          many of you are concerned about healthy eating, so we send them to a qualified nutritionist for through
-          analysis too.
-        </p>
-      </div>
-
-      <div class="column p-25"> <label class="subtitle">Grilled Praw's History</label>
-        <p class="subtext_small">
-          The Grilled Prawn is a fictional food blog created in January 2015.
-        </p>
-      </div>
-      <div class="column p-25"> <label class="subtitle">Tips and Tricks</label>
-        <p class="subtext_small">
-          Not sure how to do something? Don't panic. We have plenty of tutorials for you.
-        </p>
-        <p class="subtext_small" style="color: red;">
-          Learn more
-        </p>
-      </div>
-      <div class="column p-25"> <label class="subtitle">Help and Contact</label>
-        <p class="subtext_small">
-          Struggling with one of the recipes?
-        </p>
-        <p class="subtext_small" style="color: red;">
-          Send us an email
-        </p>
-        <p class="subtext_small">
-          We are always happy to try new things, send us your suggestions!
-        </p>
-      </div>
-      <div class="column p-25"> <label class="subtitle"> © The Grilled Prawn</label>
-        <p class="subtext_small">
-          All our recipes are tested throughtly by us to make sure they're suitable for your kitchen at home. We know
-          many of you are concerned about healthy eating, so we send them to a qualified nutritionist for through
-          analysis too
-        </p>
-      </div>
-    </div>
-
-
-    <script src="js/app.js"></script>
-</body>
-
+      <script src="js/app.js"></script>
+   </body>
 </html>

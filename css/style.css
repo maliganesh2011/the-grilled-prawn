@@ -331,6 +331,7 @@
   }
   .rtBorder{
       border-right: 1px solid;
+      max-width: 25%;
   }
   .mins-icon > .row > .columnShowRecipe > .clickBtn >#minus{
   display: none;
@@ -338,7 +339,11 @@
   .plus-icon > .row > .columnShowRecipe > .clickBtn > #plus{
 display: none;
   }
-  
+  #showNationalItme{
+    -webkit-columns: 3; 
+    -moz-columns: 3; 
+    columns: 3;
+  }
 
 #customBox{
     padding-left: 25px;
