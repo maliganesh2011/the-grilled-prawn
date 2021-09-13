@@ -213,6 +213,7 @@ function deleteRow(r) {
 }
 
 function insRow() {
+	if(document.getElementById("cell1").value.length>1&&document.getElementById("cell3").value.length>1){
 	var x = document
 		.getElementById("myTable")
 		.insertRow(document.getElementById("myTable").rows.length);
@@ -221,17 +222,25 @@ function insRow() {
 	var z = x.insertCell(1);
 	var g = x.insertCell(2);
 	var p = x.insertCell(3);
-	y.innerHTML = document.getElementById("cell1").value;
-	z.innerHTML = document.getElementById("cell2").value;
-	g.innerHTML = document.getElementById("cell3").value;
-	p.innerHTML =
-		'<button  class="c-btn_red_rm" value="Remove" onclick="deleteRow(this)"> <img style="vertical-align:middle" src="./icons/trash.gif" width="20px" height="15px"> Remove</button';
-	document.getElementById("cell1").value = "";
-	document.getElementById("cell2").value = "";
-	document.getElementById("cell3").value = "";
-}
+	
+		y.innerHTML = document.getElementById("cell1").value;
+		z.innerHTML = document.getElementById("cell2").value;
+		g.innerHTML = document.getElementById("cell3").value;
+		p.innerHTML =
+			'<button  class="c-btn_red_rm" value="Remove" onclick="deleteRow(this)"> <img style="vertical-align:middle" src="./icons/trash.gif" width="20px" height="15px"> Remove</button';
+		document.getElementById("cell1").value = "";
+		document.getElementById("cell2").value = "";
+		document.getElementById("cell3").value = "";
+	}
+	else{
+		confirm("Please Fill Name & Email atleast")
+	}
 
-function myFunction() {
+}
+function featureDevelopment() {
+	confirm(" Well! This is for Feature Development!");
+  }
+function toggle() {
 	var x = document.getElementById("showRecip");
 	if (x.style.display === "none") {
 		x.style.display = "block";
@@ -243,7 +252,7 @@ function myFunction() {
 		x.parentElement.classList.remove("plus-icon");
 	}
 }
-myFunction();
+toggle();
 
 function topFunction() {
 	document.body.scrollTop = 0;
