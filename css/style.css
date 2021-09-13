@@ -93,7 +93,6 @@
     padding: 12px 24px 12px 24px;
     border-radius: 4px;
     color: #fff;
-    background-image: url("data:image/svg+xml,%3Csvg width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 24px center;
   }
@@ -103,7 +102,6 @@
     padding: 12px 0px 12px 0px;
     border-radius: 4px;
     color: #fff;
-    background-image: url("data:image/svg+xml,%3Csvg width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 24px center;
   }
@@ -259,7 +257,8 @@
   }
 
   .nav > .nav-links > a:hover {
-    background-color:var(--gravel)
+    background-color:var(--salmon-pearl);
+    color:var(--white);
   }
   
   .nav > #nav-check {
@@ -328,6 +327,7 @@
   display: flex;
   flex-direction: column;
   display: inline;
+  font-size: 20px;
   }
   .rtBorder{
       border-right: 1px solid;
@@ -346,8 +346,8 @@ display: none;
   }
 
 #customBox{
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 75px;
+    padding-right: 75px;
     background-color:var(--black-haze);
 }
 div.gallery {
@@ -400,3 +400,13 @@ div.gallery {
   .p-25{
     padding: 25px;
   }
+  .nav-links >:first-child .a {
+   font-weight: bold;
+  }
+  .nav-links .navMenu:first-child {
+    font-weight: bold;
+}
+#filter{
+  background-color: #ea474c;padding-left: 35px;padding-top: 20px;
+  font-size: 18px;
+}

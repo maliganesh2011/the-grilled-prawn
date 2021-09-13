@@ -183,7 +183,7 @@ document.getElementById("showFoodType").innerHTML = food;
 var menuType = "";
 
 for (let i = 0; i < MenuItem.length; i++) {
-	menuType += ' <a href="#" target="_blank">' + MenuItem[i] + "</a>";
+	menuType += ' <a href="#" target="_blank" class="navMenu">' + MenuItem[i] + "</a>";
 }
 menuType += "";
 document.getElementById("showMenu").innerHTML = menuType;
@@ -242,14 +242,15 @@ function featureDevelopment() {
   }
 function toggle() {
 	var x = document.getElementById("showRecip");
-	if (x.style.display === "none") {
-		x.style.display = "block";
-		x.parentElement.classList.remove("mins-icon");
-		x.parentElement.classList.add("plus-icon");
-	} else {
+	if (x.style.display === "block") {
 		x.style.display = "none";
 		x.parentElement.classList.add("mins-icon");
 		x.parentElement.classList.remove("plus-icon");
+	} else {
+		x.style.display = "block";
+
+		x.parentElement.classList.remove("mins-icon");
+		x.parentElement.classList.add("plus-icon");
 	}
 }
 toggle();
